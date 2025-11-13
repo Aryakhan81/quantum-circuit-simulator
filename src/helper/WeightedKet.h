@@ -12,10 +12,12 @@
 
 #include "Complex.h"
 
+typedef unsigned long long int Ket;
+
 class WeightedKet {
 public:
 	WeightedKet();
-	WeightedKet(int size, Complex amplitude, unsigned long long int ket);
+	WeightedKet(int size, Complex amplitude, Ket ket);
 	virtual ~WeightedKet();
 	WeightedKet(const WeightedKet &other);
 
@@ -25,16 +27,16 @@ public:
 	// Getters
 	int getSize() const;
 	Complex getAmplitude() const;
-	unsigned long long int getKet() const;
+	Ket getKet() const;
 
 	// Setters
 	void setAmplitude(Complex amplitude);
-	void setKet(unsigned long long int ket);
+	void setKet(Ket ket);
 
 private:
 	int size;
 	Complex amplitude;
-	unsigned long long int ket;
+	Ket ket;
 };
 
 #endif /* WEIGHTEDKET_H_ */

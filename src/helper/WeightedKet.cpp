@@ -13,7 +13,7 @@ WeightedKet::WeightedKet() {
 	this->ket = 0;
 }
 
-WeightedKet::WeightedKet(int size, Complex amplitude, unsigned long long int ket) {
+WeightedKet::WeightedKet(int size, Complex amplitude, Ket ket) {
 	this->size = size;
 	this->amplitude = amplitude;
 	this->ket = ket;
@@ -39,7 +39,7 @@ Complex WeightedKet::getAmplitude() const {
 	return this->amplitude;
 }
 
-unsigned long long int WeightedKet::getKet() const {
+Ket WeightedKet::getKet() const {
 	return this->ket;
 }
 
@@ -47,6 +47,6 @@ void WeightedKet::setAmplitude(Complex amplitude) {
 	this->amplitude = amplitude;
 }
 
-void WeightedKet::setKet(unsigned long long int ket) {
+void WeightedKet::setKet(Ket ket) {
 	this->ket = ket;
 }
